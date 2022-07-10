@@ -1,0 +1,105 @@
+
+html, body {
+
+  width:100%;
+  height:100%;
+  color:white;
+  margin:0;
+  padding:0;
+  background:#333;
+}
+
+#app {
+
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  width:100%;
+  height:100%;
+}
+
+#app h2 {
+  margin:0 auto;
+  padding-top:32px;
+  color:white;
+}
+
+.image-input {
+
+  margin-top:20px;
+  margin-bottom:80px;
+  text-align:center;
+  border-radius:6px;
+  padding:6px;
+  font-size:20px;
+}
+
+.scene {
+
+  width:800px;
+  height:600px;
+  -webkit-perspective:1000;
+  perspective:1000;
+  perspective-origin:50% 50%;
+  transform-style:preserve-3d;
+  position:relative;
+  margin:0 auto;
+}
+
+/*Main cube element*/
+.spinning-cube {
+
+  position:absolute;
+  top:50%;
+  left:50%;
+  backface-visibility: visible;
+  transform:rotateX(20deg) rotateY(30deg) rotateZ(10deg);
+  transform-style:preserve-3d;
+  transform-origin:50% 50%;
+  cursor:pointer;
+}
+
+/*Cube face*/
+.spinning-cube .plane {
+
+  width:400px;
+  height:400px;
+  transform-origin:50% 50%;
+  position:absolute;
+  backface-visibility: visible;
+  top:-200px;
+  left:-200px;
+}
+
+.p-1 {
+  background:red;
+  transform:translateX(-200px) rotateY(-90deg);
+}
+
+.p-2 {
+  background:blue;
+  transform:translateZ(200px);
+}
+
+.p-3 {
+  background:yellow;
+  transform:translateX(200px) rotateY(90deg);
+}
+
+.p-4 {
+  background:green;
+  transform:translateZ(-200px);
+}
+
+.p-5 {
+  background:cyan;
+  transform:translateY(-200px) rotateX(90deg);
+}
+
+.p-6 {
+  background:magenta;
+  transform:translateY(200px) rotateX(-90deg);
+}
+
